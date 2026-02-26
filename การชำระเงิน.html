@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>การชำระเงิน</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+/* แบนเนอร์ */
+.header img{
+    width:100%;
+}
+
+/* กล่องฟอร์ม */
+.container{
+    width:450px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+}
+
+input, select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+    border:none;
+    background:black;
+    color:white;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#444;
+}
+
+.footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+</style>
+
+<script>
+function confirmPayment(){
+    alert("ชำระเงินสำเร็จ! ขอบคุณที่ใช้บริการ");
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="header"></div>
+
+<div class="container">
+    <h2>แบบฟอร์มการชำระเงิน</h2>
+
+    <label>ชื่อ-นามสกุล</label>
+    <input type="text" placeholder="กรอกชื่อของคุณ">
+
+    <label>เบอร์โทรศัพท์</label>
+    <input type="text" placeholder="กรอกเบอร์โทร">
+
+    <label>ที่อยู่จัดส่ง</label>
+    <input type="text" placeholder="กรอกที่อยู่">
+
+    <label>เลือกช่องทางการชำระเงิน</label>
+    <select>
+        <option>โอนผ่านธนาคาร</option>
+        <option>บัตรเครดิต / เดบิต</option>
+        <option>PromptPay</option>
+        <option>เก็บเงินปลายทาง</option>
+    </select>
+
+    <button onclick="confirmPayment()">ยืนยันการชำระเงิน</button>
+</div>
+
+<div class="footer">
+© 2026 Watch Shop | โทร 089-xxx-xxxx
+</div>
+
+</body>
+</html>
