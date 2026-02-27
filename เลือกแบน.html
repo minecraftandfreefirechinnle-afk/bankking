@@ -89,18 +89,26 @@ function showPrice(){
         result.innerHTML = "กรุณาเลือกแบรนด์";
     }
 }
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
 </script>
 
 </head>
 
-<body>
+<body onLoad="MM_preloadImages('file:///C|/091/แนะนำ (1).png','file:///C|/091/price5 (1).png','file:///C|/091/pay8 (1).png','file:///C|/091/cont9 (1).png','file:///C|/091/sug10 (1).png')">
 
 <div class="header">
-    <img src="รูป/แบน.png" alt="ราคาแต่ละแบรนด์">
+  <p>&nbsp;</p>
+  <p><img src="รูป/แบน.png" width="1375" height="344" alt=""/></p>
+  <p>&nbsp;</p>
 </div>
 
 <div class="container">
-    <h2>เลือกราคาแต่ละแบรนด์</h2>
+  <h2>เลือกราคาแต่ละแบรนด์</h2>
 
     <select id="brand">
         <option value="">-- เลือกแบรนด์ --</option>
