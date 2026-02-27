@@ -11,12 +11,6 @@ body{
     background:#f4f4f4;
 }
 
-/* แบนเนอร์ */
-.header img{
-    width:100%;
-}
-
-/* กล่องฟอร์ม */
 .container{
     width:450px;
     margin:40px auto;
@@ -29,6 +23,17 @@ body{
 h2{
     text-align:center;
     margin-bottom:20px;
+}
+
+.order-box{
+    background:#f9f9f9;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.order-box ul{
+    padding-left:20px;
 }
 
 label{
@@ -70,16 +75,41 @@ button:hover{
 </style>
 
 <script>
+function loadOrders(){
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    let list = document.getElementById("orderList");
+
+    if(orders.length === 0){
+        list.innerHTML = "<li>ไม่มีรายการสั่งซื้อ</li>";
+    }else{
+        orders.forEach(function(item){
+            let li = document.createElement("li");
+            li.textContent = item;
+            list.appendChild(li);
+        });
+    }
+}
+
 function confirmPayment(){
     alert("ชำระเงินสำเร็จ! ขอบคุณที่ใช้บริการ");
+
+    // ล้างรายการหลังชำระเงิน
+    localStorage.removeItem("orders");
 }
 </script>
 
 </head>
 
-<body>
+<body onload="loadOrders()">
+
 <div class="container">
-  <h2>แบบฟอร์มการชำระเงิน</h2>
+    <h2>แบบฟอร์มการชำระเงิน</h2>
+
+    <!-- แสดงรายการที่สั่ง -->
+    <div class="order-box">
+        <strong>รายการที่สั่ง:</strong>
+        <ul id="orderList"></ul>
+    </div>
 
     <label>ชื่อ-นามสกุล</label>
     <input type="text" placeholder="กรอกชื่อของคุณ">
