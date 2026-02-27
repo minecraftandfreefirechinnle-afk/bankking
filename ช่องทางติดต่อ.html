@@ -3,18 +3,94 @@
 <head>
 <meta charset="utf-8">
 <title>ติดต่อเรา</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-body{font-family:Arial;background:#f4f4f4;text-align:center;}
-.box{background:white;width:400px;margin:50px auto;padding:30px;border-radius:15px;}
+body{
+    font-family:'Prompt',sans-serif;
+    background: linear-gradient(135deg,#1e3c72,#2a5298);
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:white;
+    width:420px;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+h2{
+    margin-bottom:25px;
+    color:#2a5298;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:15px;
+    margin:15px 0;
+    padding:12px 15px;
+    border-radius:12px;
+    background:#f5f7fa;
+    transition:0.3s;
+    text-decoration:none;
+    color:#333;
+    font-size:15px;
+}
+
+.contact-item i{
+    font-size:20px;
+    color:#2a5298;
+    width:25px;
+    text-align:center;
+}
+
+.contact-item:hover{
+    background:#2a5298;
+    color:white;
+    transform:translateY(-3px);
+}
+
+.contact-item:hover i{
+    color:white;
+}
+
+.footer{
+    margin-top:20px;
+    font-size:13px;
+    color:#888;
+}
 </style>
 </head>
 <body>
 
 <div class="box">
-<h2>ติดต่อเรา</h2>
-<p>โทร: 089-xxx-xxxx</p>
-<p>Line: @watchshop</p>
-<p>Email: watch@email.com</p>
+    <h2>📞 ติดต่อเรา</h2>
+
+    <a class="contact-item" href="tel:089xxxxxxx">
+        <i class="fa-solid fa-phone"></i>
+        089-xxx-xxxx
+    </a>
+
+    <a class="contact-item" href="https://line.me/R/ti/p/@watchshop" target="_blank">
+        <i class="fa-brands fa-line"></i>
+        Line: @watchshop
+    </a>
+
+    <a class="contact-item" href="mailto:watch@email.com">
+        <i class="fa-solid fa-envelope"></i>
+        watch@email.com
+    </a>
+
+    <div class="footer">
+        เปิดให้บริการทุกวัน 09:00 - 18:00 น.</div>
 </div>
 
 </body>
