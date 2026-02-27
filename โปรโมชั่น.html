@@ -101,17 +101,16 @@ button:hover{
 <script>
 function orderSuccess(productName){
 
-    // ดึงรายการเดิม (ถ้ายังไม่มีให้เป็น array ว่าง)
+ 
     let orders = JSON.parse(localStorage.getItem("orders")) || [];
 
-    // เพิ่มสินค้าใหม่เข้าไป
+
     orders.push(productName);
 
-    // บันทึกลง localStorage
+  
     localStorage.setItem("orders", JSON.stringify(orders));
 
-    // ไปหน้าชำระเงิน
-    window.location.href = "payment.html";
+
 }
 </script>
 
